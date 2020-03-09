@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/abernier/react-ssr/workflows/ci/cd/badge.svg)](https://github.com/abernier/ssrr/actions?query=workflow%3Aci%2Fcd)
+[![Build Status](https://github.com/abernier/ssrr/workflows/ci/cd/badge.svg)](https://github.com/abernier/ssrr/actions?query=workflow%3Aci%2Fcd)
 [![NPM version](https://img.shields.io/npm/v/ssrr.svg?style=flat)](https://www.npmjs.com/package/ssrr)
 ![David](https://img.shields.io/david/abernier/ssrr)
 [![Coveralls github](https://img.shields.io/coveralls/github/abernier/ssrr)](https://coveralls.io/github/abernier/ssrr)
