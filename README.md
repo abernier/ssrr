@@ -23,3 +23,7 @@ const server = ssr(`${__dirname}/build`, App, routes)
 const port = 5000
 server.listen(port, () => console.log(`ok, ssrr is now listening on port ${port}`))
 ```
+
+# NPM
+
+To release a new version on [npm](https://www.npmjs.com/package/ssrr), create [a new realese](https://github.com/abernier/ssrr/releases/new) and wait for the [ci/cd](https://github.com/abernier/ssrr/actions?query=workflow%3Aci%2Fcd) publish it :)
