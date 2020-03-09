@@ -39,4 +39,6 @@ NB: if you're using `yarn start` on 1., you still have hot-reload on port 5000 :
 
 # NPM
 
-To release a new version on [npm](https://www.npmjs.com/package/ssrr), create [a new realese](https://github.com/abernier/ssrr/releases/new) and wait for the [ci/cd](https://github.com/abernier/ssrr/actions?query=workflow%3Aci%2Fcd) publish it :)
+To release a new version on [npm](https://www.npmjs.com/package/ssrr):
+1. bump the [`package.json` version](https://github.com/abernier/ssrr/edit/master/package.json)
+2. then, create [a new realese](https://github.com/abernier/ssrr/releases/new) and wait for the [ci/cd](https://github.com/abernier/ssrr/actions?query=workflow%3Aci%2Fcd) publish it :)
