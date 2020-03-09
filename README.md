@@ -5,24 +5,37 @@
 
 # SSRR -- ServerSideReactRendering
 
-```js
-const ssr = require('ssrr')
+1. `yarn build` or `yarn start` your [CRA](https://create-react-app.dev/)
+   ```sh
+   $ yarn start
+   ```
+2. Start the backend server:
+   ```sh
+   $ node server.js
+   ```
+    ```js
+    // server.js
+    
+    const ssr = require('ssrr')
 
-require("@babel/register")({
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-  plugins: [
-    [ "transform-require-ignore", {"extensions": [".css"]} ]
-  ]
-});
+    require("@babel/register")({
+      presets: ["@babel/preset-env", "@babel/preset-react"],
+      plugins: [
+        [ "transform-require-ignore", {"extensions": [".css"]} ]
+      ]
+    });
 
-const App = require('./src/App.js').default
-const routes = Object.values(require('./src/routes.js').default)
+    const App = require('./src/App.js').default
+    const routes = Object.values(require('./src/routes.js').default)
 
-const server = ssr(`${__dirname}/build`, App, routes)
+    const server = ssr(`${__dirname}/build`, App, routes)
 
-const port = 5000
-server.listen(port, () => console.log(`ok, ssrr is now listening on port ${port}`))
-```
+    const port = 5000
+    server.listen(port, () => console.log(`ok, ssrr is now listening on port ${port}`))
+    ```
+3. go to http://localhost:5000
+
+NB: if you're using `yarn start` on 1., you still have hot-reload on port 5000 :)
 
 # NPM
 
