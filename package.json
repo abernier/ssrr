@@ -43,6 +43,12 @@
     "type": "git",
     "url": "https://github.com/abernier/ssrr.git"
   },
+  "keywords": [
+    "react",
+    "ssr",
+    "http-proxy",
+    "express"
+  ],
   "engines": {
     "node": ">=8"
   }
