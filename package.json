@@ -1,12 +1,19 @@
 {
   "name": "ssrr",
   "version": "0.1.2",
-  "main": "lib/index.js",
-  "files": ["lib/*"],
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "browser.js",
+    "lib/"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "tap --bail -R spec --timeout=60"
+    "pretest": "yarn link && yarn link ssrr && yarn build",
+    "test": "tap --bail -R spec --timeout=60",
+    "posttest": "yarn unlink ssrr"
   },
   "dependencies": {
     "express": "^4.17.1",

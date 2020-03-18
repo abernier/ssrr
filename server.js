@@ -3,7 +3,9 @@ const ssr = require('./lib')
 require("@babel/register")({
   presets: ["@babel/preset-env", "@babel/preset-react"],
   plugins: [
-    [ "transform-require-ignore", {"extensions": [".css"]} ]
+    [ "transform-require-ignore", {"extensions": [".css"]} ],
+    // "@babel/plugin-transform-runtime" // async/await support (see: https://babeljs.io/docs/en/babel-plugin-transform-runtime)
+    // "@babel/plugin-proposal-optional-chaining"
   ]
 });
 

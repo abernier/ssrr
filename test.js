@@ -28,7 +28,7 @@ const HOST = 'http://localhost:5000'
 // ##    ## ##          ##    ##     ## ##        
 //  ######  ########    ##     #######  ##        
 
-const {stdout, stderr}  = exec(`yarn build`);
+// const {stdout, stderr}  = exec(`yarn build`);
 
 tap.beforeEach(function (done) {
   console.log('beforeEach')
@@ -68,7 +68,7 @@ tap.test('build folder', async t => {
     uri: `${HOST}/`
   });
 
-  t.ok(resp.body.includes('Welcome!!'), 'home ok')
+  t.ok(/Hi.*sexy.*!/.test(resp.body), 'home ok')
 
   //
   // ABOUT
