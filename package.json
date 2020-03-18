@@ -9,11 +9,11 @@
     "lib/"
   ],
   "scripts": {
+    "postinstall": "yarn link && yarn link ssrr",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "pretest": "yarn link && yarn link ssrr && yarn build",
-    "test": "tap --bail -R spec --timeout=60",
-    "posttest": "yarn unlink ssrr"
+    "pretest": "yarn build",
+    "test": "tap --bail -R spec --timeout=60"
   },
   "dependencies": {
     "express": "^4.17.1",

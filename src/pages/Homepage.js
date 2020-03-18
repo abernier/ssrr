@@ -3,19 +3,27 @@ import React from "react"
 import {getSSRContext} from 'ssrr/browser'
 
 class Homepage extends React.Component {
+  static fetchInitialData() {
+    console.log('fetchInitialData...')
+    
+    return new Promise(resolve => setTimeout(() => resolve({you: 'sexy'}), 3000))
+  }
+
   constructor(props) {
     super(props)
 
-    const context = getSSRContext(this)
+    this.ssrContext = getSSRContext(this)
 
-    this.state = {
-      you: context?.data?.you
-    }
+    this.state = this.init(this.ssrContext?.data)
+  }
+
+  init(data) {
+    return {you: data?.you}
   }
 
   componentDidMount() {
-    this.constructor.fetchInitialData().then(data => {
-      this.setState({you: data.you})
+    this.ssrContext || this.constructor.fetchInitialData().then(data => {
+      this.setState(this.init(data))
     })
   }
 
@@ -28,9 +36,6 @@ class Homepage extends React.Component {
       </>
     );
   }
-}
-Homepage.fetchInitialData = () => {
-  return new Promise(resolve => setTimeout(() => resolve({you: 'sexy'}), 3000))
 }
 
 export default Homepage
