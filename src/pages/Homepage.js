@@ -1,12 +1,12 @@
 import React from "react"
 
-import {getContext} from 'ssrr/browser'
+import {getSSRContext} from 'ssrr/browser'
 
 class Homepage extends React.Component {
   constructor(props) {
     super(props)
 
-    const context = getContext(this)
+    const context = getSSRContext(this)
 
     this.state = {
       you: context?.data?.you
