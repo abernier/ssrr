@@ -33,7 +33,7 @@ const HOST = 'http://localhost:5000'
 tap.beforeEach(function (done) {
   console.log('beforeEach')
 
-  server = ssr(`${__dirname}/build`, App, routes)
+  server = ssr(App, routes)
   server.listen(port, () => {
     console.log(`ok, server is now listening on port ${port}`)
     done()

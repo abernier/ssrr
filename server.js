@@ -12,7 +12,10 @@ require("@babel/register")({
 const App = require('./src/App.js').default
 const routes = Object.values(require('./src/routes.js').default)
 
-const server = ssr(`${__dirname}/build`, App, routes)
+const server = ssr(App, routes, {
+  buildPath: `${__dirname}/build`,
+  target: 'http://localhost:3000'
+})
 
 const port = 5000
 server.listen(port, () => console.log(`ok, server is now listening on port ${port}`))

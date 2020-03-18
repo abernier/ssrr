@@ -12,7 +12,7 @@ class Homepage extends React.Component {
   constructor(props) {
     super(props)
 
-    this.ssrContext = getSSRContext(this)
+    this.ssrContext = getSSRContext(this) // { data: {you: 'sexy'} }
 
     this.state = this.init(this.ssrContext?.data)
   }
