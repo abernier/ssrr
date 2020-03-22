@@ -14,7 +14,8 @@ const routes = Object.values(require('./src/routes.js').default)
 
 const server = ssr(App, routes, {
   buildPath: `${__dirname}/build`,
-  target: 'http://localhost:3000'
+  target: 'http://localhost:3000',
+  rootSelector: '#root'
 })
 
 const port = 5000
