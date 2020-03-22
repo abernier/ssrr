@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "http-proxy": "^1.18.0",
     "is-reachable": "^4.0.0",
+    "jsdom": "^16.2.1",
     "lodash.defaultsdeep": "^4.6.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

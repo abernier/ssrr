@@ -18,7 +18,7 @@ const routes = Object.values(require('./src/routes.js').default)
 let server;
 const port = 5000
 
-const HOST = 'http://localhost:5000'
+const HOST = `http://localhost:${port}`
 
 // ######  ######## ######## ##     ## ########  
 // ##    ## ##          ##    ##     ## ##     ## 
