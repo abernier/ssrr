@@ -16,7 +16,7 @@
     ```js
     // server.js
     
-    const ssr = require('ssrr')
+    const ssrr = require('ssrr')
 
     require("@babel/register")({
       presets: ["@babel/preset-env", "@babel/preset-react"],
@@ -28,9 +28,10 @@
     const App = require('./src/App.js').default
     const routes = Object.values(require('./src/routes.js').default)
 
-    const server = ssr(App, routes, {
+    const server = ssrr(App, routes, {
       buildPath: `${__dirname}/build`,
-      target: 'http://localhost:3000'
+      target: 'http://localhost:3000',
+      rootSelector: '#root'
     })
 
     const port = 5000

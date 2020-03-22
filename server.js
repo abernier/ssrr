@@ -1,4 +1,4 @@
-const ssr = require('./lib')
+const ssrr = require('./lib')
 
 require("@babel/register")({
   presets: ["@babel/preset-env", "@babel/preset-react"],
@@ -12,7 +12,7 @@ require("@babel/register")({
 const App = require('./src/App.js').default
 const routes = Object.values(require('./src/routes.js').default)
 
-const server = ssr(App, routes, {
+const server = ssrr(App, routes, {
   buildPath: `${__dirname}/build`,
   target: 'http://localhost:3000',
   rootSelector: '#root'
