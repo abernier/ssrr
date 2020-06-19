@@ -5,6 +5,10 @@
 
 # SSRR -- ServerSideReactRendering
 
+SSRR is a backend express server, that will render your React App server-side.
+
+# Usage
+
 1. `yarn build` or `yarn start` your [CRA](https://create-react-app.dev/)
    ```sh
    $ yarn start
